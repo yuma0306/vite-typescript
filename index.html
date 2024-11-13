@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TypeScript</title>
+  </head>
+  <body>
+    <div class="js-app"></div>
+    <hr>
+    <h2>グロナビ・ハンバーガー・スマホだけアコーディオン</h2>
+    <button type="button" class="js-burger-btn">ハンバーガー</button>
+    <ul class="js-burger-menu">
+      <li class="js-gnav-triger js-acc-sp">
+        <span class="js-acc-sp-triger">サブメニューあり</span>
+        <div class="js-gnav-content js-acc-sp-content">
+          <ul>
+            <li>
+              <a href="#">
+                <span>サブメニュー1</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>サブメニュー2</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="js-gnav-triger js-acc-sp">
+        <span class="js-acc-sp-triger">サブメニューあり</span>
+        <div class="js-gnav-content js-acc-sp-content">
+          <ul>
+            <li>
+              <a href="#">
+                <span>サブメニュー1</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>サブメニュー2</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a>メニュー</a>
+      </li>
+      <li>
+        <a>メニュー</a>
+      </li>
+    </ul>
+    <!-- script -->
+    <script type="module" src="/src/ts/script.ts"></script>
+  </body>
+</html>
