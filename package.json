@@ -13,8 +13,10 @@
     "vite": "^5.4.10"
   },
   "dependencies": {
+    "@types/swiper": "^6.0.0",
     "install": "^0.13.0",
     "npm": "^10.9.0",
-    "sass": "^1.80.7"
+    "sass": "^1.80.7",
+    "swiper": "^11.1.14"
   }
 }

@@ -1,3 +1,38 @@
+// 共通
+.js-modal {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
+.js-overlay {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #333, $alpha: .8);
+  z-index: 100;
+}
+.modal {
+  display: grid;
+  place-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  box-shadow: 0 0 1px #333;
+  z-index: 200;
+}
 // PC
 @media only screen and (min-width: 641px) {
   // グロナビ

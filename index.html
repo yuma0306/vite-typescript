@@ -1,59 +1,128 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TypeScript</title>
-  </head>
-  <body>
-    <div class="js-app"></div>
-    <hr>
-    <h2>グロナビ・ハンバーガー・スマホだけアコーディオン</h2>
-    <button type="button" class="js-burger-btn">ハンバーガー</button>
-    <ul class="js-burger-menu">
-      <li class="js-gnav-triger js-acc-sp">
-        <span class="js-acc-sp-triger">サブメニューあり</span>
-        <div class="js-gnav-content js-acc-sp-content">
-          <ul>
-            <li>
-              <a href="#">
-                <span>サブメニュー1</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>サブメニュー2</span>
-              </a>
-            </li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEB UI</title>
+</head>
+<body>
+  <div class="js-app"></div>
+  <hr>
+  <h2>フォームバリデーション</h2>
+  <form class="js-form-contact" action="" method="POST" novalidate>
+    <div style="display: grid; row-gap: 24px">
+      <div class="js-vali js-require js-vali-empty">
+        <label>
+          <span>必須</span>
+          <span>氏名</span>
+        </label>
+        <div>
+          <input class="js-vali-flag" name="" type="text">
+          <span class="js-vali-err"></span>
         </div>
-      </li>
-      <li class="js-gnav-triger js-acc-sp">
-        <span class="js-acc-sp-triger">サブメニューあり</span>
-        <div class="js-gnav-content js-acc-sp-content">
-          <ul>
-            <li>
-              <a href="#">
-                <span>サブメニュー1</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>サブメニュー2</span>
-              </a>
-            </li>
-          </ul>
+      </div>
+      <div class="js-vali js-require js-vali-empty">
+        <label>
+          <span>必須</span>
+          <span>ニックネーム</span>
+        </label>
+        <div>
+          <input class="js-vali-flag" name="" type="text">
+          <span class="js-vali-err"></span>
         </div>
-      </li>
-      <li>
-        <a>メニュー</a>
-      </li>
-      <li>
-        <a>メニュー</a>
-      </li>
-    </ul>
-    <!-- script -->
-    <script type="module" src="/src/ts/script.ts"></script>
-  </body>
+      </div>
+      <div class="js-vali js-require js-vali-tel">
+        <label>
+          <span>必須</span>
+          <span>電話番号</span>
+        </label>
+        <div>
+          <input name="" type="tel">
+          <span class="js-vali-err"></span>
+        </div>
+      </div>
+      <div class="js-vali js-require js-vali-email">
+        <label>
+          <span>必須</span>
+          <span>メールアドレス</span>
+        </label>
+        <div>
+          <input name="" type="email">
+          <span class="js-vali-err"></span>
+        </div>
+      </div>
+    </div>
+    <div class="js-vali js-require js-vali-checkbox">
+      <label>
+        <input type="checkbox">
+        <span>同意する</span>
+      </label>
+      <span class="js-vali-err"></span>
+    </div>
+    <button class="js-submit-btn" type="button">送信する</button>
+  </form>
+
+  <hr>
+  <h2>グロナビ・ハンバーガー・スマホだけアコーディオン</h2>
+  <button type="button" class="js-burger-btn">ハンバーガー</button>
+  <ul class="js-burger-menu">
+    <li class="js-gnav-triger js-acc-sp">
+      <span class="js-acc-sp-triger">サブメニューあり</span>
+      <div class="js-gnav-content js-acc-sp-content">
+        <ul>
+          <li>
+            <a href="#">
+              <span>サブメニュー1</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>サブメニュー2</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="js-gnav-triger js-acc-sp">
+      <span class="js-acc-sp-triger">サブメニューあり</span>
+      <div class="js-gnav-content js-acc-sp-content">
+        <ul>
+          <li>
+            <a href="#">
+              <span>サブメニュー1</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>サブメニュー2</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <a>メニュー</a>
+    </li>
+    <li>
+      <a>メニュー</a>
+    </li>
+  </ul>
+  <hr>
+  <div style="height: 3000px">
+    <h2>↓モーダルコンテンツ↓</h2>
+  </div>
+  <!-- modal -->
+  <div class="js-modal">
+    <div class="modal">
+      <div>モーダル</div>
+      <button type="button" class="js-modal-close">閉じる</button>
+    </div>
+  </div>
+  <div class="overlay js-overlay"></div>
+  <!-- /modal -->
+  <!-- script -->
+  <script type="module" src="./script.ts"></script>
+  <!-- /script -->
+</body>
 </html>
