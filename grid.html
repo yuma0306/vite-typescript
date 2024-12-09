@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEB UI</title>
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <style>
+    .wrapper {
+
+    }
+    .card {
+      display: grid;
+      /* 利用可能なスペースに合わせてトラックが伸縮し、余分なスペースを埋めます。 */
+      /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+
+      /* 利用可能なスペースに合わせてトラックが増減しますが、余分なスペースがあってもトラックの数は変わりません。 */
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+    }
+    .card__item {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 4;
+      /* subgridで上書き可能 */
+      row-gap: 0;
+      box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
+    }
+    .card__pic {
+      padding: 40px;
+      display: grid;
+      place-content: center;
+    }
+    .card__img {
+      display: block;
+      width: fit-content;
+      margin-inline: auto;
+    }
+    .card__title {
+      display: grid;
+      grid-template-rows: subgrid;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: lemonchiffon;
+    }
+    .card__text {
+      padding: 20px;
+      background-color: lightcyan;
+    }
+    .card__link {
+      display: block;
+      padding: 40px;
+    }
+    /* .card__item {
+      display: grid;
+      grid-template-areas:
+        "title"
+        "."
+        "image"
+        "."
+        "text"
+        "."
+        "link";
+      grid-template-rows: auto 5px auto 10px auto 15px auto;
+    }
+    .card__title {
+      grid-area: title;
+    }
+    .card__img {
+      grid-area: image;
+    }
+    .card__text {
+      grid-area: text;
+    }
+    .card__link {
+      grid-area: link;
+    } */
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <ul class="card">
+      <li class="card__item">
+        <h2 class="card__title">
+          タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+        </h2>
+        <picture class="card__pic"><img class="card__img" src="public/vite.svg" alt=""></picture>
+        <p class="card__text">
+          テキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+        <a class="card__link" href="/">リンクです。</a>
+      </li>
+      <li class="card__item">
+        <h2 class="card__title">
+          タイトルタイトルタイトルタイトルタイトルタイトル
+        </h2>
+        <picture class="card__pic"><img class="card__img" src="public/vite.svg" alt=""></picture>
+        <p class="card__text">
+          テキストテキスト
+        </p>
+        <a class="card__link" href="/">リンクです。</a>
+      </li>
+      <li class="card__item">
+        <h2 class="card__title">
+          タイトルタイトル
+        </h2>
+        <picture class="card__pic"><img class="card__img" src="public/vite.svg" alt=""></picture>
+        <p class="card__text">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+        <a class="card__link" href="/">リンクです。</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
